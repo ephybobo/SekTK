@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/h" >
+
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:paddingTop="10pt"
+        android:text="REGISTER FORM "
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30pt"
+        android:text="NAMA LENGKAP: "
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/innama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="67dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorAccent"
+        android:hint="Nama Lengkap"
+        android:paddingLeft="30pt" />
+
+    <TextView
+        android:id="@+id/nrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30pt"
+        android:text="USERNAME: "
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+
+    <EditText
+        android:id="@+id/innrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="67dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorAccent"
+        android:hint="id/nip/nrp"
+        android:paddingLeft="30pt" />
+
+
+    <TextView
+        android:id="@+id/pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30pt"
+        android:text="PASSWORD:"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/inpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="67dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorAccent"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:paddingLeft="30pt" />
+
+    <TextView
+        android:id="@+id/repass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30pt"
+        android:text="STATUS:"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/inrepass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="67dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorAccent"
+        android:hint="status"
+        android:paddingLeft="30pt" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="40dp"
+        android:backgroundTint="#f9f000"
+        android:hint="REGISTER"
+        android:textColorHint="#000000" />
+
+</LinearLayout>

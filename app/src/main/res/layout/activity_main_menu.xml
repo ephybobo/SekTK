@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/h">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SEK - TK"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_below="@id/title"
+                android:columnCount="1">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/menu1"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_margin="20dp"
+                    app:cardBackgroundColor="#ffffff">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Update Jadwal Kuliah"
+                            android:onClick="update"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/menu2"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_margin="20dp"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/judul"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Insert Jadwal Kuliah"
+                            android:onClick="insert"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/menu3"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_margin="20dp"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/jdl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Register"
+                            android:onClick="register"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </GridLayout>
+
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

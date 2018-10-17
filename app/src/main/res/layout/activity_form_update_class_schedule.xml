@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/h">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title_update_class_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update Jadwal Kuliah"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <RelativeLayout
+                android:id="@+id/isian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_update_class_schedule">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/kotak_matkul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/title_matkul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="Nama Mata Kuliah"
+                            android:textAlignment="center" />
+
+                        <Spinner
+                            android:id="@+id/nama_matkul"
+                            android:layout_below="@id/title_matkul"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/kotak_dosen"
+                    android:layout_below="@id/kotak_matkul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/title_dosen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="Nama Dosen"
+                            android:textAlignment="center" />
+
+                        <Spinner
+                            android:id="@+id/nama_dosen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title_dosen" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/kotak_ruang"
+                    android:layout_below="@id/kotak_dosen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/title_kd_ruang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="Ruang"
+                            android:textAlignment="center" />
+
+                        <Spinner
+                            android:id="@+id/kd_ruang"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title_kd_ruang" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/kotak_hari"
+                    android:layout_below="@id/kotak_ruang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/title_hari"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="Hari"
+                            android:textAlignment="center" />
+
+                        <Spinner
+                            android:id="@+id/hari"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title_hari" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/kotak_jam"
+                    android:layout_below="@id/kotak_hari"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/title_jam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="Jam"
+                            android:textAlignment="center" />
+
+                        <EditText
+                            android:id="@+id/jam"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title_jam"
+                            android:layout_centerHorizontal="true"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/isian"
+                android:layout_centerHorizontal="true"
+                android:text="Update" />
+
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
