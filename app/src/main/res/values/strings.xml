@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Sek-TK</string>
+    <string name="title_activity_cctv">cctvActivity</string>
 </resources>

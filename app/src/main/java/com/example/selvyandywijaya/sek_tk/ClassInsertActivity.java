@@ -14,7 +14,7 @@ public class ClassInsertActivity extends AppCompatActivity {
     }
     public void main_menu (View view)
     {
-        Intent intent = new Intent(this, MainMenu.class);
+        Intent intent = new Intent(this, MainMenuActivity.class);
         startActivity(intent);
     }
 }

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class MainMenu extends AppCompatActivity {
+public class MainMenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,7 +14,7 @@ public class MainMenu extends AppCompatActivity {
     }
     public void register (View view)
     {
-        Intent intent = new Intent(this, Main2Activity.class);
+        Intent intent = new Intent(this, RegisterUserActivity.class);
         startActivity(intent);
     }
     public void update (View view)
@@ -25,6 +25,11 @@ public class MainMenu extends AppCompatActivity {
     public void insert (View view)
     {
         Intent intent = new Intent(this, ClassInsertActivity.class);
+        startActivity(intent);
+    }
+    public void cctv (View view)
+    {
+        Intent intent = new Intent(this, cctvActivity.class);
         startActivity(intent);
     }
 }
