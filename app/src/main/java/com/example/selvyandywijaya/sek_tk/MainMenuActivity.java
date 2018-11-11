@@ -17,14 +17,19 @@ public class MainMenuActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RegisterUserActivity.class);
         startActivity(intent);
     }
+    public void view (View view)
+    {
+        Intent intent = new Intent(this, ViewRuangActivity.class);
+        startActivity(intent);
+    }
     public void update (View view)
     {
-        Intent intent = new Intent(this, ClassUpdatedActivity.class);
+        Intent intent = new Intent(this, ClassScheduleUpdateActivity.class);
         startActivity(intent);
     }
     public void insert (View view)
     {
-        Intent intent = new Intent(this, ClassInsertActivity.class);
+        Intent intent = new Intent(this, ClassScheduleInsertActivity.class);
         startActivity(intent);
     }
     public void cctv (View view)

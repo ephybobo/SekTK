@@ -12,6 +12,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -29,8 +30,8 @@ public class cctvActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cctv);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+      //  Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+      //  setSupportActionBar(toolbar);
 
 
         /*
@@ -44,7 +45,7 @@ public class cctvActivity extends AppCompatActivity {
         });*/
 
         myWebView = (WebView) findViewById(R.id.webview);
-
+/*
         myWebView.setWebViewClient(new MyWebViewClient(){
             @Override
             @SuppressWarnings("deprecation")
@@ -78,14 +79,16 @@ public class cctvActivity extends AppCompatActivity {
 
 
             }
-        });
+        });*/
 
+        myWebView.setWebChromeClient(new WebChromeClient());
+        myWebView.setWebViewClient(new WebViewClient());
         myWebView.getSettings().setAppCachePath(this.getCacheDir().getAbsolutePath());
         myWebView.getSettings().setAllowFileAccess(true);
         myWebView.getSettings().setAppCacheEnabled(true);
         myWebView.getSettings().setJavaScriptEnabled(true);
         myWebView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
-
+/*
         if( !isNetworkStatusAvailable()){
             myWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
             myWebView.setVisibility(View.VISIBLE);
@@ -94,23 +97,24 @@ public class cctvActivity extends AppCompatActivity {
         }else {
             Toast toast = Toast.makeText(this, "Not Cache", Toast.LENGTH_SHORT);
             toast.show();
-        }
+        }*/
 
 
-        myWebView.loadUrl("https://192.168.43.1:8080");
-
+      //  myWebView.loadUrl("https://192.168.43.1:8080");
+        myWebView.loadUrl("https://youtube.com");
     }
 
     public  void ReloadWeb(){
         myWebView.reload();
     }
 
+/*
     private class MyWebViewClient extends WebViewClient {
 
         @SuppressWarnings("deprecation")
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            if (Uri.parse(url).getHost().contains("192.168.43.1")) {
+            if (Uri.parse(url).getHost().contains("youtube.com")) {
                 // if (Uri.parse(url).getHost().equals("10.0.2.2")) {//emulator
                 // if (Uri.parse(url).getHost().equals("192.168.43.51")) {//adb
                 // This is my web site, so do not override; let my WebView load the page
@@ -122,7 +126,8 @@ public class cctvActivity extends AppCompatActivity {
             return true;
         }
     }
-
+*/
+    /*
     //check connection by checking if connected to a network
     public boolean isNetworkStatusAvailable(){
         ConnectivityManager conMan = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -135,6 +140,6 @@ public class cctvActivity extends AppCompatActivity {
         return false;
 
 
-    }
+    }*/
 
 }

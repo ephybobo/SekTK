@@ -2,10 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.selvyandywijaya.sek_tk">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="SEK-TK LOGIN"
+        android:label="SEK-TK"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -25,15 +27,17 @@
             android:name=".MainMenuActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ClassUpdatedActivity"
+            android:name=".ClassScheduleUpdateActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ClassInsertActivity"
+            android:name=".ClassScheduleInsertActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".cctvActivity"
             android:label="@string/title_activity_cctv"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ViewJadwalActivity" />
+        <activity android:name=".ViewRuangActivity"></activity>
     </application>
 
 </manifest>

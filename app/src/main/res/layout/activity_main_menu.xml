@@ -6,140 +6,111 @@
     android:layout_height="match_parent"
     android:background="@drawable/h">
 
-    <android.support.constraint.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:orientation="vertical">
 
-        <RelativeLayout
+        <ImageView
+            android:id="@+id/imageView3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:paddingTop="80dp"
+            app:srcCompat="@drawable/sek" />
 
-            <TextView
-                android:id="@+id/title"
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorPrimary"
+            android:padding="10dp">
+
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="SEK - TK"
-                android:textAlignment="center"
-                android:textColor="#ffffff"
-                android:textSize="30dp"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="0dp" />
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1">
 
-            <GridLayout
+                <Button
+                    android:id="@+id/button3"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@android:drawable/ic_lock_lock"
+                    android:onClick="insert"
+                    android:text="Insert Jadwal" />
+
+                <Button
+                    android:id="@+id/button4"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@android:drawable/ic_lock_lock"
+                    android:onClick="register"
+                    android:text="Insert Ruang" />
+
+            </TableRow>
+
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:layout_below="@id/title"
-                android:columnCount="1">
+                android:layout_height="match_parent">
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/cctv"
-                    android:layout_width="match_parent"
-                    android:layout_height="75dp"
-                    android:layout_margin="20dp"
-                    app:cardBackgroundColor="#ffffff"
-                    app:cardCornerRadius="15dp">
+                <Button
+                    android:id="@+id/button7"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@android:drawable/ic_lock_lock"
+                    android:onClick="register"
+                    android:text="Manage Jadwal" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                <Button
+                    android:id="@+id/button8"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@android:drawable/ic_lock_lock"
+                    android:onClick="register"
+                    android:text="Manage Ruang" />
+            </TableRow>
 
-                        <Button
-                            android:id="@+id/jdl"
-                            style="@style/Widget.AppCompat.Button.Borderless"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:onClick="cctv"
-                            android:text="CCTV"
-                            android:textAlignment="center" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
+                <Button
+                    android:id="@+id/button5"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@android:drawable/ic_lock_lock"
+                    android:onClick="view"
+                    android:text="Lihat Ruang" />
+            </TableRow>
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/menu1"
-                    android:layout_width="match_parent"
-                    android:layout_height="75dp"
-                    app:cardCornerRadius="15dp"
-                    android:layout_margin="20dp"
-                    app:cardBackgroundColor="#ffffff">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                <Button
+                    android:id="@+id/button2"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@android:drawable/ic_lock_lock"
+                    android:onClick="cctv"
+                    android:text="CCTV" />
+            </TableRow>
+        </TableLayout>
 
-                        <Button
-                            android:id="@+id/textView"
-                            style="@style/Widget.AppCompat.Button.Borderless"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:onClick="update"
-                            android:text="Update Jadwal Kuliah"
-                            android:textAlignment="center" />
+    </LinearLayout>
 
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/menu2"
-                    android:layout_width="match_parent"
-                    android:layout_height="75dp"
-                    android:layout_margin="20dp"
-                    app:cardBackgroundColor="#ffffff"
-                    app:cardCornerRadius="15dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <Button
-                            android:id="@+id/judul"
-                            style="@style/Widget.AppCompat.Button.Borderless"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:onClick="insert"
-                            android:text="Insert Jadwal Kuliah"
-                            android:textAlignment="center" />
-
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    android:id="@+id/menu3"
-                    android:layout_width="match_parent"
-                    android:layout_height="75dp"
-                    android:layout_margin="20dp"
-                    app:cardBackgroundColor="#ffffff"
-                    app:cardCornerRadius="15dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <Button
-                            android:id="@+id/jdl"
-                            style="@style/Widget.AppCompat.Button.Borderless"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:onClick="register"
-                            android:text="Register"
-                            android:textAlignment="center" />
-
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </GridLayout>
-
-        </RelativeLayout>
-
-    </android.support.constraint.ConstraintLayout>
 </ScrollView>
