@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingTop="10dp"
+            android:paddingTop="30dp"
             android:paddingBottom="20dp"
             app:srcCompat="@drawable/sek" />
 
@@ -66,9 +66,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableTop="@android:drawable/ic_lock_lock"
                     android:onClick="register"
-                    android:text="Manage Jadwal" />
+                    android:text="Jadwal" />
 
                 <Button
                     android:id="@+id/button8"
@@ -76,22 +75,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableTop="@android:drawable/ic_lock_lock"
                     android:onClick="register"
-                    android:text="Manage Ruang" />
+                    android:text="Ruang" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <Button
+                <ImageButton
                     android:id="@+id/button5"
                     style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:drawableTop="@android:drawable/ic_lock_lock"
+                    android:src="@drawable/cctv"
+                    android:scaleType="fitCenter"
                     android:onClick="view"
                     android:text="Lihat Ruang" />
             </TableRow>
@@ -106,7 +105,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableTop="@android:drawable/ic_lock_lock"
                     android:onClick="cctv"
                     android:text="CCTV" />
             </TableRow>
