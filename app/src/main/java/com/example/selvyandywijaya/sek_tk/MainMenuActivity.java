@@ -12,24 +12,29 @@ public class MainMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
     }
-    public void register (View view)
+    public void registerUser (View view)
     {
         Intent intent = new Intent(this, RegisterUserActivity.class);
         startActivity(intent);
     }
-    public void view (View view)
+    public void viewRuang (View view)
     {
         Intent intent = new Intent(this, ViewRuangActivity.class);
         startActivity(intent);
     }
-    public void update (View view)
+    public void updateJadwal (View view)
     {
-        Intent intent = new Intent(this, ClassScheduleUpdateActivity.class);
+        Intent intent = new Intent(this, UpdateJadwalActivity.class);
         startActivity(intent);
     }
-    public void insert (View view)
+    public void insertJadwal (View view)
     {
-        Intent intent = new Intent(this, ClassScheduleInsertActivity.class);
+        Intent intent = new Intent(this, InsertJadwalActivity.class);
+        startActivity(intent);
+    }
+    public void insertRuang (View view)
+    {
+        Intent intent = new Intent(this, InsertRuangActivity.class);
         startActivity(intent);
     }
     public void cctv (View view)

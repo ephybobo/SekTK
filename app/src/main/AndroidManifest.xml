@@ -13,6 +13,12 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RegisterUserActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainMenuActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,23 +27,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterUserActivity"
+            android:name=".UpdateJadwalActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".MainMenuActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".ClassScheduleUpdateActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".ClassScheduleInsertActivity"
+            android:name=".InsertJadwalActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".cctvActivity"
             android:label="@string/title_activity_cctv"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ViewJadwalActivity" />
-        <activity android:name=".ViewRuangActivity"></activity>
+        <activity android:name=".ViewRuangActivity" />
+        <activity android:name=".ManageJadwalActivity" />
+        <activity android:name=".InsertRuangActivity"></activity>
     </application>
 
 </manifest>
