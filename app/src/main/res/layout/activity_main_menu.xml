@@ -38,9 +38,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableTop="@android:drawable/ic_lock_lock"
-                    android:onClick="insert"
-                    android:text="Insert Jadwal" />
+                    android:drawableTop="@drawable/ic_schedule_24dp"
+                    android:onClick="insertJadwal"
+                    android:text="Insert Jadwal"
+                    android:textColor="@android:color/background_light" />
 
                 <Button
                     android:id="@+id/button4"
@@ -48,9 +49,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableTop="@android:drawable/ic_lock_lock"
-                    android:onClick="register"
-                    android:text="Insert Ruang" />
+                    android:drawableTop="@drawable/ic_schedule_24dp"
+                    android:onClick="insertRuang"
+                    android:text="Insert Ruang"
+                    android:textColor="@android:color/background_light" />
 
             </TableRow>
 
@@ -64,9 +66,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableTop="@android:drawable/ic_lock_lock"
-                    android:onClick="register"
-                    android:text="Manage Jadwal" />
+                    android:drawableTop="@drawable/ic_schedule_24dp"
+                    android:onClick="updateJadwal"
+                    android:text="Manage Jadwal"
+                    android:textColor="@android:color/background_light"/>
 
                 <Button
                     android:id="@+id/button8"
@@ -74,9 +77,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableTop="@android:drawable/ic_lock_lock"
+                    android:drawableTop="@drawable/ic_schedule_24dp"
                     android:onClick="register"
-                    android:text="Manage Ruang" />
+                    android:text="Manage Ruang"
+                    android:textColor="@android:color/background_light"/>
             </TableRow>
 
             <TableRow
@@ -89,9 +93,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableTop="@android:drawable/ic_lock_lock"
-                    android:onClick="view"
-                    android:text="Lihat Ruang" />
+                    android:drawableTop="@drawable/ic_schedule_24dp"
+                    android:onClick="viewRuang"
+                    android:text="Lihat Ruang"
+                    android:textColor="@android:color/background_light" />
             </TableRow>
 
             <TableRow
@@ -104,9 +109,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableTop="@android:drawable/ic_lock_lock"
+                    android:drawableTop="@drawable/ic_schedule_24dp"
                     android:onClick="cctv"
-                    android:text="CCTV" />
+                    android:text="CCTV"
+                    android:textColor="@android:color/background_light"/>
             </TableRow>
         </TableLayout>
 

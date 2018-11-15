@@ -5,11 +5,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class ClassScheduleInsertActivity extends AppCompatActivity {
+public class UpdateJadwalActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_form_insert_class_schedule);
+        setContentView(R.layout.activity_update_jadwal);
 
     }
     public void main_menu (View view)
