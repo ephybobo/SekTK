@@ -16,9 +16,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:paddingTop="10dp"
             android:paddingBottom="20dp"
-            android:paddingTop="80dp"
-            app:srcCompat="#a4d3f0" />
+            app:srcCompat="@drawable/sek" />
 
         <TableLayout
             android:layout_width="match_parent"
@@ -34,8 +34,8 @@
                 <ImageButton
                     android:id="@+id/button3"
                     style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
                     android:src="@drawable/jadwal"
                     android:onClick="insert"
@@ -43,14 +43,15 @@
                     android:text="Insert Jadwal" />
 
 
-                <Button
+                <ImageButton
                     android:id="@+id/button4"
                     style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:drawableTop="@android:drawable/ic_lock_lock"
+                    android:src="@drawable/ruang"
                     android:onClick="register"
+                    android:scaleType="fitCenter"
                     android:text="Insert Ruang" />
 
             </TableRow>
