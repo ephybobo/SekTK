@@ -2,6 +2,7 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:background="#41acfa">
@@ -10,40 +11,92 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#41acfa"
-        android:orientation="vertical"
-        android:paddingTop="150dp">
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/matakuliah"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Insert:"
-            android:textColor="@color/colorPrimary" />
+            android:orientation="horizontal"
+            android:paddingTop="30pt">
 
-        <Button
-            android:id="@+id/dosen"
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                app:srcCompat="@drawable/insertJadwal" />
+
+            <Button
+                android:id="@+id/matakuliah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="0.3"
+                android:paddingTop="11pt"
+                android:paddingBottom="11pt"
+                android:text="Insert Jadwal"
+                android:layout_marginRight="10pt"
+                android:textColor="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Manage:"
-            android:textColor="@color/colorPrimary" />
+            android:orientation="horizontal"
+            android:paddingTop="30pt">
 
-        <Button
-            android:id="@+id/hari"
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                app:srcCompat="@drawable/manageJadwal" />
+
+            <Button
+                android:id="@+id/dosen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="0.3"
+                android:text="Manage Jadwal"
+                android:textColor="@color/colorPrimary"
+                android:paddingTop="11pt"
+                android:paddingBottom="11pt"
+                android:layout_marginRight="10pt" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:paddingBottom="20dp"
-            android:text="Liwat :"
-            android:textColor="@color/colorPrimary" />
+            android:orientation="horizontal"
+            android:paddingTop="30pt">
 
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                app:srcCompat="@drawable/lihatJadwal" />
+            <Button
+                android:id="@+id/hari"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="0.3"
+                android:text="Liwat Jadwal"
+                android:textColor="@color/colorPrimary"
+                android:paddingTop="11pt"
+                android:paddingBottom="11pt"
+                android:layout_marginRight="10pt" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>
