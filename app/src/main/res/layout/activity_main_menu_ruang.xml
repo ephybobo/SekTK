@@ -33,11 +33,12 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_weight="0.3"
-                android:paddingTop="11pt"
-                android:paddingBottom="11pt"
-                android:text="Insert Jadwal"
                 android:layout_marginRight="10pt"
+                android:layout_weight="0.3"
+                android:onClick="insertJadwal"
+                android:paddingBottom="11pt"
+                android:paddingTop="11pt"
+                android:text="Insert Ruang"
                 android:textColor="@color/colorPrimary" />
         </LinearLayout>
 
@@ -61,12 +62,13 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
+                android:layout_marginRight="10pt"
                 android:layout_weight="0.3"
-                android:text="Manage Jadwal"
-                android:textColor="@color/colorPrimary"
-                android:paddingTop="11pt"
+                android:onClick="manageJadwal"
                 android:paddingBottom="11pt"
-                android:layout_marginRight="10pt" />
+                android:paddingTop="11pt"
+                android:text="Manage Ruang"
+                android:textColor="@color/colorPrimary" />
 
         </LinearLayout>
 
@@ -83,18 +85,20 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
                 app:srcCompat="@drawable/lihatJadwal" />
+
             <Button
                 android:id="@+id/hari"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
+                android:layout_marginRight="10pt"
                 android:layout_weight="0.3"
-                android:text="Liwat Jadwal"
-                android:textColor="@color/colorPrimary"
-                android:paddingTop="11pt"
+                android:onClick="viewRuang"
                 android:paddingBottom="11pt"
-                android:layout_marginRight="10pt" />
+                android:paddingTop="11pt"
+                android:text="Lihat Ruang"
+                android:textColor="@color/colorPrimary" />
 
         </LinearLayout>
     </LinearLayout>
