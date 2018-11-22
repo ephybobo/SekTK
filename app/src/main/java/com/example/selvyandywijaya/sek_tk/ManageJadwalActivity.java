@@ -43,13 +43,13 @@ public class ManageJadwalActivity extends AppCompatActivity {
         super.onStart();
 
         // Get the Intent that started this activity and extract the string
-        Intent intent = getIntent();
-        String room = intent.getStringExtra("RuangName");
+       // Intent intent = getIntent();
+       // String room = intent.getStringExtra("RuangName");
 
-        TextView txtName = findViewById(R.id.NamaRuang);
-        txtName.setText(room);
-
-        mJadwalRef.orderByChild("ruang").equalTo(room).addValueEventListener(new ValueEventListener() {
+       // TextView txtName = findViewById(R.id.NamaRuang);
+       // txtName.setText(room);
+    //.orderByChild("ruang").equalTo(room)
+        mJadwalRef.orderByChild("ruang").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
