@@ -17,6 +17,16 @@ public class MainMenuActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RegisterUserActivity.class);
         startActivity(intent);
     }
+    public void menuJadwal (View view)
+    {
+        Intent intent = new Intent(this, MenuJadwalActivity.class);
+        startActivity(intent);
+    }
+    public void menuRuang (View view)
+    {
+        Intent intent = new Intent(this, MenuRuangActivity.class);
+        startActivity(intent);
+    }
     public void viewRuang (View view)
     {
         Intent intent = new Intent(this, ViewRuangActivity.class);

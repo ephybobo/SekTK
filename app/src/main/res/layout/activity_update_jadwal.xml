@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/h">
-        android:layout_gravity="center">
+    android:background="#41acfa">
+    android:layout_gravity="center">
 
         <RelativeLayout
             android:layout_width="match_parent"

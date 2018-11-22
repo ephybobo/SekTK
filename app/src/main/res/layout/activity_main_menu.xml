@@ -38,7 +38,7 @@
                     android:layout_height="100dp"
                     android:layout_weight="1"
                     android:src="@drawable/jadwal"
-                    android:onClick="insert"
+                    android:onClick="menuJadwal"
                     android:scaleType="fitCenter"
                     android:text="Insert Jadwal" />
 
@@ -49,9 +49,9 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:src="@drawable/ruang"
-                    android:onClick="register"
+                    android:onClick="menuRuang"
                     android:scaleType="fitCenter"
+                    android:src="@drawable/ruang"
                     android:text="Insert Ruang" />
 
             </TableRow>
@@ -66,7 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="register"
+                    android:onClick=""
                     android:text="Jadwal" />
 
                 <Button
@@ -75,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="register"
+                    android:onClick="cctv"
                     android:text="Ruang" />
             </TableRow>
 
