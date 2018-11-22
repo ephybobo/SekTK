@@ -25,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                app:srcCompat="@drawable/insertJadwal" />
+                app:srcCompat="@drawable/insertjadwal" />
 
             <Button
                 android:id="@+id/matakuliah"
@@ -54,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            app:srcCompat="@drawable/manageJadwal" />
+            app:srcCompat="@drawable/managejadwal" />
 
         <Button
             android:id="@+id/dosen"
@@ -85,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                app:srcCompat="@drawable/lihatJadwal" />
+                app:srcCompat="@drawable/lihatjadwal" />
 
             <Button
                 android:id="@+id/hari"
