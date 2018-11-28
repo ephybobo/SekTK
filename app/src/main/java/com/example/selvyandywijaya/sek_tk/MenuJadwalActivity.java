@@ -13,6 +13,12 @@ public class MenuJadwalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu_jadwal);
     }
 
+    public void viewJadwal (View view)
+    {
+        Intent intent = new Intent(this, ViewJadwalActivity.class);
+        startActivity(intent);
+    }
+
     public void updateJadwal (View view)
     {
         Intent intent = new Intent(this, UpdateJadwalActivity.class);

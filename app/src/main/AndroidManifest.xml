@@ -13,8 +13,7 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".RegisterUserActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -23,6 +22,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -38,12 +38,15 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ViewJadwalActivity" />
         <activity android:name=".ViewRuangActivity" />
-        <activity android:name=".ManageJadwalActivity">
-
-        </activity>
-        <activity android:name=".InsertRuangActivity">
-
-        </activity>
+        <activity android:name=".ManageJadwalActivity"></activity>
+        <activity android:name=".InsertRuangActivity"></activity>
+        <activity android:name=".ManageRuangActivity"></activity>
+        <activity
+            android:name=".MenuJadwalActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuRuangActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

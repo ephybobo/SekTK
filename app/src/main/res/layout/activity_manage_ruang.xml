@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#41acfa"
-    tools:context="com.example.selvyandywijaya.sek_tk.ManageJadwalActivity">
+    tools:context="com.example.selvyandywijaya.sek_tk.ManageRuangActivity">
 
     <ListView
         android:id="@+id/lv"
