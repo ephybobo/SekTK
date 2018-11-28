@@ -101,7 +101,7 @@
                     android:layout_weight="1"
                     android:onClick="registerUser"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ruang"
+                    android:src="@drawable/register"
                     android:text="Insert Ruang" />
             </TableRow>
 
@@ -124,7 +124,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="cctv"
+                    android:onClick="registerUser"
                     android:text="Register" />
             </TableRow>
         </TableLayout>
