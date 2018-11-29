@@ -16,7 +16,7 @@
         android:layout_marginBottom="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="100dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:ems="60"
             android:background="@drawable/userbutton"
-            android:padding="10dp"
+            android:padding="50dp"
             android:hint="Nama Ruang"
             android:inputType="text" />
 
