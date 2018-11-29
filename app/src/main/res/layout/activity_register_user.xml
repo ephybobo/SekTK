@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#41acfa" >
+    android:background="#41acfa">
 
 
     <TextView
         android:id="@+id/logo"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -37,7 +38,8 @@
         android:layout_marginLeft="67dp"
         android:layout_marginRight="50dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/colorAccent"
+        android:background="@drawable/userbutton"
+        android:padding="10dp"
         android:hint="Nama Lengkap"
         android:paddingLeft="30pt" />
 
@@ -58,8 +60,9 @@
         android:layout_marginLeft="67dp"
         android:layout_marginRight="50dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/colorAccent"
+        android:background="@drawable/userbutton"
         android:hint="id/nip/nrp"
+        android:padding="10dp"
         android:paddingLeft="30pt" />
 
 
@@ -79,7 +82,8 @@
         android:layout_marginLeft="67dp"
         android:layout_marginRight="50dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/colorAccent"
+        android:background="@drawable/userbutton"
+        android:padding="10dp"
         android:hint="password"
         android:inputType="textPassword"
         android:paddingLeft="30pt" />
@@ -94,7 +98,7 @@
         android:textStyle="bold|italic" />
 
     <android.support.v7.widget.CardView
-        android:id="@+id/kotak_hari"
+        android:id="@+id/inrepass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/kotak_ruang"
@@ -119,13 +123,15 @@
 
     <Button
         android:id="@+id/register"
-        android:layout_width="100dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="60dp"
-        android:layout_marginRight="40dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="50dp"
         android:backgroundTint="#f9f000"
         android:hint="REGISTER"
+        android:background="@drawable/buttonlogin"
         android:textColorHint="#000000" />
 
 </LinearLayout>
