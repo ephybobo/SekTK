@@ -19,9 +19,23 @@ public class MenuRuangActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /*
+    public void updateRuang (View view)
+    {
+        Intent intent = new Intent(this, UpdateRuangActivity.class);
+        startActivity(intent);
+    }*/
+
     public void insertRuang (View view)
     {
         Intent intent = new Intent(this, InsertRuangActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void manageRuang (View view)
+    {
+        Intent intent = new Intent(this, ManageRuangActivity.class);
         startActivity(intent);
     }
 }

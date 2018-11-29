@@ -37,9 +37,9 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:src="@drawable/jadwal"
                     android:onClick="menuJadwal"
                     android:scaleType="fitCenter"
+                    android:src="@drawable/jadwal"
                     android:text="Insert Jadwal" />
 
 
@@ -99,7 +99,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:onClick="menuRuang"
+                    android:onClick="registerUser"
                     android:scaleType="fitCenter"
                     android:src="@drawable/register"
                     android:text="Insert Ruang" />
