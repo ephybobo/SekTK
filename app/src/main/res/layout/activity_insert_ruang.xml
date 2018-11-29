@@ -8,15 +8,15 @@
     android:layout_height="match_parent"
     tools:context="com.example.selvyandywijaya.sek_tk.InsertRuangActivity"
     android:background="#41acfa">
-
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#41acfa"
         android:layout_marginBottom="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="100dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,14 +27,18 @@
             android:id="@+id/NamaRuang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
+            android:ems="60"
+            android:background="@drawable/userbutton"
+            android:padding="50dp"
             android:hint="Nama Ruang"
             android:inputType="text" />
 
         <Button
             android:id="@+id/SubmitRuang"
+            android:layout_marginTop="100pt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/buttonlogin"
             android:text="Submit" />
 
     </LinearLayout>
