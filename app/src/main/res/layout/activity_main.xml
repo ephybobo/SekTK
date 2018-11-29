@@ -32,13 +32,14 @@
         android:id="@+id/inuser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="67dp"
         android:layout_marginRight="50dp"
-        android:layout_marginBottom="10dp"
         android:background="@color/colorAccent"
         android:hint="id/nip/nrp"
-        android:paddingLeft="3pt"
-        android:paddingBottom="5dp" />
+        android:inputType="text"
+        android:paddingBottom="5dp"
+        android:paddingLeft="3pt" />
 
     <TextView
         android:id="@+id/pass"

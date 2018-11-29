@@ -104,8 +104,8 @@ public class InsertJadwalActivity extends AppCompatActivity implements AdapterVi
         JamSpinner.setAdapter(JamAdapter);
         RuangSpinner.setAdapter(RuangAdapter);
 
-        final Button SubmitRuang = findViewById(R.id.SubmitJadwal);
-        SubmitRuang.setOnClickListener(new View.OnClickListener() {
+        final Button SubmitJadwal = findViewById(R.id.SubmitJadwal);
+        SubmitJadwal.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
 

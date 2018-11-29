@@ -177,15 +177,11 @@
                             android:text="Jam"
                             android:textAlignment="center" />
 
-                        <EditText
+                        <Spinner
                             android:id="@+id/jam"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/title_jam"
-                            android:layout_centerHorizontal="true"
-                            android:ems="10"
-                            android:inputType="textPersonName"
-                            android:textSize="14sp" />
+                            android:layout_below="@id/title_jam" />
 
                     </RelativeLayout>
 

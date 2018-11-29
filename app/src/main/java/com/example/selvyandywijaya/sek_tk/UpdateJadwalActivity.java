@@ -102,8 +102,8 @@ public class UpdateJadwalActivity extends AppCompatActivity  implements AdapterV
         JamSpinner.setAdapter(JamAdapter);
         RuangSpinner.setAdapter(RuangAdapter);
 
-        final Button SubmitRuang = findViewById(R.id.SubmitJadwal);
-        SubmitRuang.setOnClickListener(new View.OnClickListener() {
+        final Button Submit = findViewById(R.id.btn_update);
+        Submit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
 

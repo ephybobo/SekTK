@@ -1,6 +1,9 @@
 package com.example.selvyandywijaya.sek_tk.adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +12,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.selvyandywijaya.sek_tk.MainMenuActivity;
 import com.example.selvyandywijaya.sek_tk.R;
+import com.example.selvyandywijaya.sek_tk.UpdateJadwalActivity;
 import com.example.selvyandywijaya.sek_tk.model.Jadwal;
 import com.example.selvyandywijaya.sek_tk.model.Ruang;
 
@@ -76,6 +81,11 @@ public class ManageRuangAdapter extends BaseAdapter {
                 //tv.setText(String.valueOf(number));
 
                 // MainActivity.modelArrayList.get(pos).setNumber(number);
+
+                Intent intent = new Intent(context, UpdateJadwalActivity.class);
+                //startActivity(intent);
+                context.startActivity(intent);
+
                 Toast.makeText(context, "buttonEdit"+ ruang.getText().toString() + position , Toast.LENGTH_LONG).show();
             }
         });
@@ -92,7 +102,28 @@ public class ManageRuangAdapter extends BaseAdapter {
                 //tv.setText(String.valueOf(number));
 
                 // MainActivity.modelArrayList.get(pos).setNumber(number);
-                Toast.makeText(context, "buttonDelete"+ ruang.getText().toString() + position , Toast.LENGTH_LONG).show();
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setMessage("Hapus Ruang ?");
+                // Add the buttons
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User clicked OK button
+                        Toast.makeText(context, "buttonDeleteOK"+ ruang.getText().toString() + position , Toast.LENGTH_LONG).show();
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User cancelled the dialog
+                        Toast.makeText(context, "buttonDeleteCancel"+ ruang.getText().toString() + position , Toast.LENGTH_LONG).show();
+                    }
+                });
+
+                // Create the AlertDialog
+                AlertDialog dialog = builder.create();
+
+                dialog.show();
+
             }
         });
 
