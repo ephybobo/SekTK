@@ -70,11 +70,11 @@ public class InsertJadwalActivity extends AppCompatActivity implements AdapterVi
 
         // Spinner Drop down elements
         List<String> dosen = new ArrayList<String>();
-        dosen.add("Senin");
-        dosen.add("Selasa");
-        dosen.add("Rabu");
-        dosen.add("Kamis");
-        dosen.add("Jumat");
+        dosen.add("Pak Ketut");
+        dosen.add("Pak Uki");
+        dosen.add("Pak Arif");
+        dosen.add("Pak Akok");
+        dosen.add("Pak Zaini");
 
         // Spinner Drop down elements
         List<String> jam = new ArrayList<String>();
