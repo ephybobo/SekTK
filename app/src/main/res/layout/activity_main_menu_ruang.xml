@@ -40,6 +40,7 @@
                 android:paddingBottom="11pt"
                 android:paddingTop="11pt"
                 android:text="Insert Ruang"
+                android:background="@drawable/buttonlogin"
                 android:textColor="@color/colorPrimary" />
         </LinearLayout>
 
@@ -69,6 +70,7 @@
                 android:paddingBottom="11pt"
                 android:paddingTop="11pt"
                 android:text="Manage Ruang"
+                android:background="@drawable/buttonlogin"
                 android:textColor="@color/colorPrimary" />
 
         </LinearLayout>
@@ -99,6 +101,7 @@
                 android:paddingBottom="11pt"
                 android:paddingTop="11pt"
                 android:text="Lihat Ruang"
+                android:background="@drawable/buttonlogin"
                 android:textColor="@color/colorPrimary" />
 
         </LinearLayout>
