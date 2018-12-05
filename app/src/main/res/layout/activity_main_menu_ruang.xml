@@ -29,18 +29,17 @@
                 app:srcCompat="@drawable/insertruang" />
 
             <Button
-                android:id="@+id/matakuliah"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginRight="10pt"
                 android:layout_weight="0.3"
+                android:background="@drawable/buttonlogin"
                 android:onClick="insertRuang"
                 android:paddingBottom="11pt"
                 android:paddingTop="11pt"
                 android:text="Insert Ruang"
-                android:background="@drawable/buttonlogin"
                 android:textColor="@color/colorPrimary" />
         </LinearLayout>
 
@@ -59,18 +58,17 @@
                 app:srcCompat="@drawable/manageruang" />
 
             <Button
-                android:id="@+id/dosen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginRight="10pt"
                 android:layout_weight="0.3"
+                android:background="@drawable/buttonlogin"
                 android:onClick="manageRuang"
                 android:paddingBottom="11pt"
                 android:paddingTop="11pt"
                 android:text="Manage Ruang"
-                android:background="@drawable/buttonlogin"
                 android:textColor="@color/colorPrimary" />
 
         </LinearLayout>
@@ -90,18 +88,17 @@
                 app:srcCompat="@drawable/lihatruang" />
 
             <Button
-                android:id="@+id/hari"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginRight="10pt"
                 android:layout_weight="0.3"
+                android:background="@drawable/buttonlogin"
                 android:onClick="viewRuang"
                 android:paddingBottom="11pt"
                 android:paddingTop="11pt"
                 android:text="Lihat Ruang"
-                android:background="@drawable/buttonlogin"
                 android:textColor="@color/colorPrimary" />
 
         </LinearLayout>

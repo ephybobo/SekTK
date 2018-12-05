@@ -195,11 +195,16 @@
 
             <Button
                 android:id="@+id/SubmitJadwal"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/isian"
-                android:layout_centerHorizontal="true"
-                android:text="Submit Jadwal" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/buttonlogin"
+                android:text="Submit Jadwal"
+                android:textColorHint="#000000" />
 
         </RelativeLayout>
 

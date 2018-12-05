@@ -22,25 +22,23 @@
             android:paddingTop="30pt">
 
             <ImageView
-                android:id="@+id/imageView2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
                 app:srcCompat="@drawable/insertjadwal" />
 
             <Button
-                android:id="@+id/matakuliah"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginRight="10pt"
                 android:layout_weight="0.3"
+                android:background="@drawable/buttonlogin"
                 android:onClick="insertJadwal"
                 android:paddingBottom="11pt"
                 android:paddingTop="11pt"
                 android:text="Insert Jadwal"
-                android:background="@drawable/buttonlogin"
                 android:textColor="@color/colorPrimary" />
         </LinearLayout>
 
@@ -52,25 +50,23 @@
         android:paddingTop="30pt">
 
         <ImageView
-            android:id="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             app:srcCompat="@drawable/managejadwal" />
 
         <Button
-            android:id="@+id/dosen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginRight="10pt"
             android:layout_weight="0.3"
+            android:background="@drawable/buttonlogin"
             android:onClick="manageJadwal"
             android:paddingBottom="11pt"
             android:paddingTop="11pt"
             android:text="Manage Jadwal"
-            android:background="@drawable/buttonlogin"
             android:textColor="@color/colorPrimary" />
 
     </LinearLayout>
@@ -84,24 +80,22 @@
             android:visibility="gone">
 
             <ImageView
-                android:id="@+id/imageView4"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
                 app:srcCompat="@drawable/lihatjadwal" />
 
             <Button
-                android:id="@+id/hari"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginRight="10pt"
                 android:layout_weight="0.3"
+                android:background="@drawable/buttonlogin"
                 android:paddingBottom="11pt"
                 android:paddingTop="11pt"
                 android:text="Liwat Jadwal"
-                android:background="@drawable/buttonlogin"
                 android:textColor="@color/colorPrimary" />
 
         </LinearLayout>
@@ -113,25 +107,23 @@
             android:paddingTop="30pt">
 
             <ImageView
-                android:id="@+id/imageView4"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
                 app:srcCompat="@drawable/lihatjadwal" />
 
             <Button
-                android:id="@+id/hari"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginRight="10pt"
                 android:layout_weight="0.3"
-                android:onClick="viewRuang"
+                android:background="@drawable/buttonlogin"
+                android:onClick="viewJadwal"
                 android:paddingBottom="11pt"
                 android:paddingTop="11pt"
                 android:text="Lihat Jadwal"
-                android:background="@drawable/buttonlogin"
                 android:textColor="@color/colorPrimary" />
 
         </LinearLayout>

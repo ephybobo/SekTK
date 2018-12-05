@@ -3,6 +3,7 @@
     package="com.example.selvyandywijaya.sek_tk">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -25,9 +26,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainMenuActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".UpdateJadwalActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -40,15 +39,16 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ViewJadwalActivity" />
         <activity android:name=".ViewRuangActivity" />
-        <activity android:name=".ManageJadwalActivity"></activity>
-        <activity android:name=".InsertRuangActivity"></activity>
-        <activity android:name=".ManageRuangActivity"></activity>
+        <activity android:name=".ManageJadwalActivity" />
+        <activity android:name=".InsertRuangActivity" />
+        <activity android:name=".ManageRuangActivity" />
         <activity
             android:name=".MenuJadwalActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MenuRuangActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".UpdateRuangActivity"></activity>
     </application>
 
 </manifest>

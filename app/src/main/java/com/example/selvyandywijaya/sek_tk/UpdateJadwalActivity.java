@@ -102,20 +102,37 @@ public class UpdateJadwalActivity extends AppCompatActivity  implements AdapterV
         JamSpinner.setAdapter(JamAdapter);
         RuangSpinner.setAdapter(RuangAdapter);
 
-        final Button Submit = findViewById(R.id.btn_update);
+        // Get the Intent that started this activity and extract the string
+        Intent intent = getIntent();
+        final String key = intent.getStringExtra("keyJadwal");
+
+        InpDosen = intent.getStringExtra("DosenJadwal");
+        InpHari = intent.getStringExtra("DayJadwal");
+        InpJam = intent.getStringExtra("JamJadwal"); ;
+        InpMatkul = intent.getStringExtra("MatkulJadwal");
+        InpRuang = intent.getStringExtra("RuangJadwal");
+      //  NamaRuang.setText(nama);
+
+        DaySpinner.setSelection(day.indexOf(InpHari));
+        MatkulSpinner.setSelection(day.indexOf(InpMatkul));
+        DosenSpinner.setSelection(day.indexOf(InpDosen));
+        JamSpinner.setSelection(day.indexOf(InpJam));
+        RuangSpinner.setSelection(day.indexOf(InpRuang));
+
+        final Button Submit = findViewById(R.id.SubmitJadwal);
         Submit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
 
-                String newJadwal = mJadwalRef.push().getKey();
+            //    String newJadwal = mJadwalRef.push().getKey();
 
                 // creating user object
                 Jadwal j = new Jadwal(InpDosen, InpHari, InpJam, InpMatkul, InpRuang);
 
                 // pushing user to 'users' node using the userId
-                mJadwalRef.child(newJadwal).setValue(j);
+                mJadwalRef.child(key).setValue(j);
 
-                Intent intent = new Intent(getApplication(), ViewRuangActivity.class);
+                Intent intent = new Intent(getApplication(), ManageJadwalActivity.class);
                 finish();
                 startActivity(intent);
                 Toast.makeText(getApplicationContext(), "Mengirim Data", Toast.LENGTH_LONG).show();

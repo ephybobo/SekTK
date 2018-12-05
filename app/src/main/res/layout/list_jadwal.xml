@@ -12,7 +12,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="50dp"
         android:orientation="vertical">
-
+<!--
         <TextView
             android:id="@+id/ruang"
             android:layout_width="match_parent"
@@ -27,7 +27,7 @@
             android:padding="10dp"
             android:text="Ruang :"
             android:textColor="@color/colorPrimary" />
-
+-->
         <TextView
             android:id="@+id/matakuliah"
             android:layout_width="match_parent"

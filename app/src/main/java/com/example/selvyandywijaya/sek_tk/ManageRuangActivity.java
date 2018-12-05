@@ -3,6 +3,7 @@ package com.example.selvyandywijaya.sek_tk;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.selvyandywijaya.sek_tk.adapter.ManageJadwalAdapter;
 import com.example.selvyandywijaya.sek_tk.adapter.ManageRuangAdapter;
@@ -34,6 +35,8 @@ public class ManageRuangActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.lv);
         adapter = new ManageRuangAdapter(this, ruangList);
         listView.setAdapter(adapter);
+
+        Toast.makeText(this, "create" , Toast.LENGTH_LONG).show();
     }
 
 
@@ -41,6 +44,8 @@ public class ManageRuangActivity extends AppCompatActivity {
     protected void onStart(){
         super.onStart();
 
+
+        Toast.makeText(this, "start" , Toast.LENGTH_LONG).show();
         // Get the Intent that started this activity and extract the string
         // Intent intent = getIntent();
         // String room = intent.getStringExtra("RuangName");
@@ -52,14 +57,16 @@ public class ManageRuangActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
+                ruangList.clear();
+
                 for (DataSnapshot childDataSnapshot : dataSnapshot.getChildren()) {
                     //   Log.v(TAG,""+ childDataSnapshot.getKey()); //displays the key for the node
                     // Log.v(TAG,""+ childDataSnapshot.child(--ENTER THE KEY NAME eg. firstname or email etc.--).getValue());   //gives the value for given keyname
                     Ruang text = childDataSnapshot.getValue(Ruang.class);
 
-                    Ruang j = new Ruang(text.nama);
+                    Ruang j = new Ruang(childDataSnapshot.getKey() ,text.nama);
 
-                    // adding movie to movies array
+                    // adding to movies array
                     ruangList.add(j);
 
                 }

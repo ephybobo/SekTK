@@ -13,10 +13,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.selvyandywijaya.sek_tk.MainMenuActivity;
+import com.example.selvyandywijaya.sek_tk.ManageRuangActivity;
 import com.example.selvyandywijaya.sek_tk.R;
 import com.example.selvyandywijaya.sek_tk.UpdateJadwalActivity;
+import com.example.selvyandywijaya.sek_tk.UpdateRuangActivity;
 import com.example.selvyandywijaya.sek_tk.model.Jadwal;
 import com.example.selvyandywijaya.sek_tk.model.Ruang;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -67,6 +71,15 @@ public class ManageRuangAdapter extends BaseAdapter {
         Button Edit = (Button) convertView.findViewById(R.id.JadwalEdit);
         Button Delete = (Button) convertView.findViewById(R.id.JadwalDelete);
 
+        // getting movie data for the row
+        final Ruang m = Items.get(position);
+
+        // thumbnail image
+        //thumbNail.setImageUrl(m.thumbnailUrl, mImageLoader);
+
+        // title
+        ruang.setText(m.nama);
+
         //  Edit.setTag();
         //Edit.setTag(R.integer.btn_plus_pos, position);
         Edit.setOnClickListener(new View.OnClickListener() {
@@ -82,7 +95,9 @@ public class ManageRuangAdapter extends BaseAdapter {
 
                 // MainActivity.modelArrayList.get(pos).setNumber(number);
 
-                Intent intent = new Intent(context, UpdateJadwalActivity.class);
+                Intent intent = new Intent(context, UpdateRuangActivity.class);
+                intent.putExtra("NamaRuang",m.nama);
+                intent.putExtra("keyRuang",m.key);
                 //startActivity(intent);
                 context.startActivity(intent);
 
@@ -94,14 +109,8 @@ public class ManageRuangAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
 
-                //View tempview = (View) holder.btn_plus.getTag(R.integer.btn_plus_view);
-                // TextView tv = (TextView) tempview.findViewById(R.id.number);
-                //Integer pos = (Integer) holder.btn_plus.getTag(R.integer.btn_plus_pos);
-
-                //int number = Integer.parseInt(tv.getText().toString()) + 1;
-                //tv.setText(String.valueOf(number));
-
-                // MainActivity.modelArrayList.get(pos).setNumber(number);
+                DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
+                final DatabaseReference mRuangRef = mRootRef.child("ruang");
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setMessage("Hapus Ruang ?");
@@ -109,7 +118,10 @@ public class ManageRuangAdapter extends BaseAdapter {
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // User clicked OK button
+                        mRuangRef.child(m.key).removeValue();
                         Toast.makeText(context, "buttonDeleteOK"+ ruang.getText().toString() + position , Toast.LENGTH_LONG).show();
+
+
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -127,14 +139,7 @@ public class ManageRuangAdapter extends BaseAdapter {
             }
         });
 
-        // getting movie data for the row
-        Ruang m = Items.get(position);
 
-        // thumbnail image
-        //thumbNail.setImageUrl(m.thumbnailUrl, mImageLoader);
-
-        // title
-        ruang.setText(m.nama);
 
         return convertView;
 

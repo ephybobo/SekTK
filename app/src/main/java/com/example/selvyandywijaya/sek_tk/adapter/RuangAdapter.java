@@ -5,8 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.selvyandywijaya.sek_tk.R;
 import com.example.selvyandywijaya.sek_tk.model.Ruang;
 
@@ -56,10 +58,16 @@ public class RuangAdapter extends BaseAdapter {
         NetworkImageView thumbNail = (NetworkImageView) convertView
                 .findViewById(R.id.thumbnail);*/
         TextView name = (TextView) convertView.findViewById(R.id.RuangName);
-
+        ImageView img = convertView.findViewById(R.id.RuangImg);
 
         // getting movie data for the row
         Ruang m = Items.get(position);
+
+        Glide.with(context)
+                .load(m.ImgUri)
+                .placeholder(R.drawable.sek)
+                .error(R.drawable.sek)
+                .into(img);
 
         // thumbnail image
         //thumbNail.setImageUrl(m.thumbnailUrl, mImageLoader);

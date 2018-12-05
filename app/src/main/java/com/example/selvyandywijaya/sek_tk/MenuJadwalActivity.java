@@ -16,6 +16,7 @@ public class MenuJadwalActivity extends AppCompatActivity {
     public void viewJadwal (View view)
     {
         Intent intent = new Intent(this, ViewJadwalActivity.class);
+        intent.putExtra("RuangName","A-234");
         startActivity(intent);
     }
 

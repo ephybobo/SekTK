@@ -53,6 +53,7 @@ public class ViewRuangActivity extends AppCompatActivity {
                                     long id) {
 
                 String Name = ruangList.get(position).nama;
+                String RKey = ruangList.get(position).key;
             /*    String ThumbnailUrl = movieList.get(position).thumbnailUrl;
                 String Price = movieList.get(position).Price;
                 String Stock = movieList.get(position).Stock;
@@ -71,6 +72,7 @@ public class ViewRuangActivity extends AppCompatActivity {
 
                 Intent intent = new Intent( getApplicationContext(), ViewJadwalActivity.class);
                 intent.putExtra("RuangName",Name);
+                intent.putExtra("keyRuang", RKey);
                 startActivity(intent);
 
 
@@ -83,19 +85,21 @@ public class ViewRuangActivity extends AppCompatActivity {
     protected void onStart(){
         super.onStart();
 
-       ruangList.clear();
+
 
         mRuangRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
+                ruangList.clear();
 
                 for (DataSnapshot childDataSnapshot : dataSnapshot.getChildren()) {
                  //   Log.v(TAG,""+ childDataSnapshot.getKey()); //displays the key for the node
                  // Log.v(TAG,""+ childDataSnapshot.child(--ENTER THE KEY NAME eg. firstname or email etc.--).getValue());   //gives the value for given keyname
                     Ruang text = childDataSnapshot.getValue(Ruang.class);
 
-                    Ruang product = new Ruang();
-                    product.nama = text.nama ;
+                    Ruang product = new Ruang(childDataSnapshot.getKey() ,text.nama, text.ImgUri );
+                    //product.nama = text.nama ;
                     // adding movie to movies array
                     ruangList.add(product);
 
