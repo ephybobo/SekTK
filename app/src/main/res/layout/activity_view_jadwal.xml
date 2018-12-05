@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#41acfa"
+    android:background="@color/colorWhite"
     android:orientation="vertical">
 
     <ScrollView
@@ -24,6 +24,7 @@
             </android.support.v4.view.ViewPager>
 
             <ImageView
+                android:scaleType="centerCrop"
                 android:id="@+id/imgRuang"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
