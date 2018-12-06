@@ -102,7 +102,8 @@ public class cctvActivity extends AppCompatActivity {
 
      //   myWebView.loadUrl("https://192.168.43.1:8080");
      //   myWebView.loadUrl("https://youtube.com");
-          myWebView.loadUrl("https://www.insecam.org/en/view/724730/");
+     //     myWebView.loadUrl("https://www.insecam.org/en/view/724730/");
+       myWebView.loadUrl("http://147.229.53.41/axis-cgi/mjpg/video.cgi?camera=&resolution=640x480&1544081566824");
             //earthcam
     }
 
