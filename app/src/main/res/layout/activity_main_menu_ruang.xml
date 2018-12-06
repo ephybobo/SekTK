@@ -40,7 +40,9 @@
                 android:paddingBottom="11pt"
                 android:paddingTop="11pt"
                 android:text="Insert Ruang"
-                android:textColor="@color/colorPrimary" />
+                android:textStyle="bold"
+                android:backgroundTint="#f9f000"
+                android:textColor="#000000" />
         </LinearLayout>
 
         <LinearLayout
@@ -69,7 +71,9 @@
                 android:paddingBottom="11pt"
                 android:paddingTop="11pt"
                 android:text="Manage Ruang"
-                android:textColor="@color/colorPrimary" />
+                android:textStyle="bold"
+                android:backgroundTint="#f9f000"
+                android:textColor="#000000" />
 
         </LinearLayout>
 
@@ -99,7 +103,9 @@
                 android:paddingBottom="11pt"
                 android:paddingTop="11pt"
                 android:text="Lihat Ruang"
-                android:textColor="@color/colorPrimary" />
+                android:backgroundTint="#f9f000"
+                android:textStyle="bold"
+                android:textColor="#000000" />
 
         </LinearLayout>
     </LinearLayout>
