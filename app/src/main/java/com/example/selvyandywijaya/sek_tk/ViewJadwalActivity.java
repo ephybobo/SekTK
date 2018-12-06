@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -32,6 +33,7 @@ public class ViewJadwalActivity extends AppCompatActivity {
     private List<Jadwal> jadwalList = new ArrayList<Jadwal>();
     private ListView listView;
     private JadwalAdapter adapter;
+    double lat,lng;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +73,7 @@ public class ViewJadwalActivity extends AppCompatActivity {
 
                     Ruang text = dataSnapshot.getValue(Ruang.class);
 
+                    lat = text.lat; lng = text.lng;
 
                 GenericTypeIndicator<ArrayList<String>> t = new GenericTypeIndicator<ArrayList<String>>() {};
                 ArrayList<String> imlist = dataSnapshot.child("image").getValue(t);
@@ -131,4 +134,13 @@ public class ViewJadwalActivity extends AppCompatActivity {
 
 
     }
+
+    public void ViewMap(View view)
+    {
+        Intent intent = new Intent(this, MapsActivity.class);
+        intent.putExtra("latroom", lat);
+        intent.putExtra("lngroom",lng);
+        startActivity(intent);
+    }
+
 }
