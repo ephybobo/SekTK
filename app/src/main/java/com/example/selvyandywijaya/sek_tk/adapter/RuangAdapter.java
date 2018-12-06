@@ -57,7 +57,7 @@ public class RuangAdapter extends BaseAdapter {
             mImageLoader = VolleySingleton.getInstance(context).getImageLoader();
         NetworkImageView thumbNail = (NetworkImageView) convertView
                 .findViewById(R.id.thumbnail);*/
-        TextView name = (TextView) convertView.findViewById(R.id.RuangName);
+        TextView name = (TextView) convertView.findViewById(R.id.NamaRuang);
         ImageView img = convertView.findViewById(R.id.RuangImg);
 
         // getting movie data for the row

@@ -26,8 +26,8 @@ public class Ruang {
     public Ruang() {
     }
 
-    public Ruang(String nama , String imguri ,double lat , double lng ) {
-            this.nama = nama; this.ImgUri = imguri;this.lat = lat; this.lng = lng;
+    public Ruang(String nama , String imguri ,double lat , double lng ,ArrayList<String> img ) {
+            this.nama = nama; this.ImgUri = imguri;this.lat = lat; this.lng = lng;this.image = img;
     }
 
     public Ruang(String key , String nama , String imguri ) {

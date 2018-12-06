@@ -111,6 +111,7 @@ public class InsertJadwalActivity extends AppCompatActivity implements AdapterVi
 
                 String newJadwal = mJadwalRef.push().getKey();
 
+
                 // creating user object
                 Jadwal j = new Jadwal(InpDosen,InpHari,InpJam,InpMatkul,InpRuang);
 
