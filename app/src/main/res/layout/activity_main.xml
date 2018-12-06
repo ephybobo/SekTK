@@ -65,7 +65,8 @@
             android:backgroundTint="#f9f000"
             android:textColor="@color/cardview_dark_background"
             android:onClick="main_menu"
-            android:background="@drawable/buttonlogin"/>
+            android:background="@drawable/buttonlogin"
+            android:textStyle="bold"/>
        
 
     </LinearLayout>

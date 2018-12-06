@@ -26,7 +26,7 @@
             android:background="@drawable/userbutton"
             android:padding="10dp"
             android:text="Ruang :"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/matakuliah"
@@ -41,7 +41,7 @@
             android:background="@drawable/userbutton"
             android:padding="10dp"
             android:text="Matakuliah :"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/dosen"
@@ -56,7 +56,7 @@
             android:background="@drawable/userbutton"
             android:padding="10dp"
             android:text="Dosen :"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="#000000" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -77,7 +77,7 @@
             android:background="@drawable/userbutton"
             android:padding="10dp"
             android:text="Hari :"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/jam"
@@ -92,7 +92,7 @@
             android:background="@drawable/userbutton"
             android:padding="10dp"
             android:text="Jam :"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="#000000" />
     </LinearLayout>
 
         <LinearLayout
@@ -107,16 +107,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/buttonlogin"
-                android:text="Edit" />
+                android:background="@drawable/buttoneditkelas"
+                android:text="Edit"
+                android:textStyle="bold"/>
 
             <Button
                 android:id="@+id/JadwalDelete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/buttonlogin"
-                android:text="Delete" />
+                android:background="@drawable/buttondeletekelas"
+                android:text="Delete"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>

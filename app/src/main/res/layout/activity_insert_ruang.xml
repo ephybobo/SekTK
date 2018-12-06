@@ -48,7 +48,7 @@
             android:id="@+id/btnChoose"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="choose" />
+            android:text="choose picture" />
 
         <Button
             android:id="@+id/btnUpload"
@@ -63,7 +63,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@drawable/buttonlogin"
-            android:text="Submit" />
+            android:backgroundTint="#f9f000"
+            android:text="Submit"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 
