@@ -65,7 +65,7 @@
             android:text="Jadwal Pemakaian"
             android:textColor="@color/colorWhite"
             app:layout_constraintBottom_toBottomOf="@+id/imgviewKelas"
-            app:layout_constraintEnd_toEndOf="@+id/imgviewKelas"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/NamaRuang" />
 
@@ -73,14 +73,14 @@
             android:id="@+id/viewMapKelas"
             android:layout_width="wrap_content"
             android:layout_height="22dp"
+            android:layout_alignParentTop="true"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="8dp"
             android:background="@drawable/buttonlocation"
             android:text="VIEW LOCATION"
             android:textColor="@color/colorWhite"
             android:textSize="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/imgviewKelas"
+            app:layout_constraintEnd_toEndOf="@+id/vp_photogallery"
             app:layout_constraintTop_toTopOf="@+id/imgviewKelas" />
 
     </android.support.constraint.ConstraintLayout>
