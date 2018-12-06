@@ -1,55 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorWhite"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <ScrollView
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/containerimage"
         android:layout_width="match_parent"
-        android:layout_height="300dp">
+        android:layout_height="250dp">
 
-        <LinearLayout
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_photogallery"
+            android:scaleType="centerCrop"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/colorDarkGray">
+    </android.support.v4.view.ViewPager>
+
+        <ImageView
+            android:id="@+id/shadingCard"
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vp_photogallery"
+            app:srcCompat="@drawable/backgroundcardviewkelas" />
+
+        <TextView
+            android:id="@+id/NamaRuang"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="KELAS"
+            android:textColor="@color/colorWhite"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgviewKelas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/shadingCard" />
 
-            <android.support.v4.view.ViewPager
-                android:id="@+id/vp_photogallery"
-                android:layout_width="match_parent"
-                android:layout_height="300dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:text="Jadwal Pemakaian"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="@+id/imgviewKelas"
+            app:layout_constraintEnd_toEndOf="@+id/imgviewKelas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/NamaRuang" />
 
-            </android.support.v4.view.ViewPager>
+        <Button
+            android:id="@+id/viewMapKelas"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/buttonlocation"
+            android:text="VIEW LOCATION"
+            android:textColor="@color/colorWhite"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/imgviewKelas"
+            app:layout_constraintTop_toTopOf="@+id/imgviewKelas" />
 
-            <ImageView
-                android:scaleType="centerCrop"
-                android:id="@+id/imgRuang"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:contentDescription="TODO"
-                android:visibility="visible"
-                app:srcCompat="@drawable/sek" />
-
-        </LinearLayout>
-    </ScrollView>
-
-    <TextView
-        android:id="@+id/NamaRuang"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="24sp" />
+    </android.support.constraint.ConstraintLayout>
 
     <ListView
         android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="16dp" />
+        android:layout_below="@+id/containerimage">
 
-</LinearLayout>
+    </ListView>
+
+</RelativeLayout>

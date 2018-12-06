@@ -9,7 +9,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.example.selvyandywijaya.sek_tk.adapter.CarouselImageAdapter;
 import com.example.selvyandywijaya.sek_tk.adapter.JadwalAdapter;
 import com.example.selvyandywijaya.sek_tk.model.Jadwal;
@@ -23,7 +22,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class ViewJadwalActivity extends AppCompatActivity {
 
@@ -92,7 +90,7 @@ public class ViewJadwalActivity extends AppCompatActivity {
                             .into(imgRuang);*/
 
 
-                Toast.makeText(getApplicationContext(), "Selamat datang j " + text.nama , Toast.LENGTH_LONG).show();
+//                Toast.makeText(getApplicationContext(), "Selamat datang j " + text.nama , Toast.LENGTH_LONG).show();
 
 
             }

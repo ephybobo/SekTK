@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true">
+<!--
+        <TextView
+            android:id="@+id/ruang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="0.1"
+            android:background="@drawable/userbutton"
+            android:padding="10dp"
+            android:text="Ruang :"
+            android:textColor="@color/colorPrimary" />
+-->
+        <TextView
+            android:id="@+id/matakuliah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.1"
+            android:background="@drawable/userbutton"
+            android:padding="10dp"
+            android:text="Matakuliah :"
+            android:textColor="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/dosen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.1"
+            android:background="@drawable/userbutton"
+            android:padding="10dp"
+            android:text="Dosen :"
+            android:textColor="@android:color/background_light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/hari"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/userbutton"
+                android:padding="10dp"
+                android:text="Hari :"
+                android:textColor="@android:color/background_light" />
+
+            <TextView
+                android:id="@+id/jam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/userbutton"
+                android:padding="10dp"
+                android:text="Jam :"
+                android:textColor="@android:color/background_light" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

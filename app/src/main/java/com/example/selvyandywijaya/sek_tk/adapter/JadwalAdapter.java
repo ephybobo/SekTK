@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.example.selvyandywijaya.sek_tk.R;
 import com.example.selvyandywijaya.sek_tk.model.Jadwal;
-import com.example.selvyandywijaya.sek_tk.model.Ruang;
 
 import java.util.List;
 

@@ -12,12 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.selvyandywijaya.sek_tk.MainMenuActivity;
-import com.example.selvyandywijaya.sek_tk.ManageRuangActivity;
 import com.example.selvyandywijaya.sek_tk.R;
-import com.example.selvyandywijaya.sek_tk.UpdateJadwalActivity;
 import com.example.selvyandywijaya.sek_tk.UpdateRuangActivity;
-import com.example.selvyandywijaya.sek_tk.model.Jadwal;
 import com.example.selvyandywijaya.sek_tk.model.Ruang;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -61,7 +57,7 @@ public class ManageRuangAdapter extends BaseAdapter {
             inflater = (LayoutInflater) context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         if (convertView == null)
-            convertView = inflater.inflate(R.layout.list_manage_ruang , null);
+            convertView = inflater.inflate(R.layout.list_manage_ruang, null);
 /*
         if (mImageLoader == null)
             mImageLoader = VolleySingleton.getInstance(context).getImageLoader();

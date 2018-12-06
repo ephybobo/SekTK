@@ -27,6 +27,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class InsertRuangActivity extends AppCompatActivity {
@@ -167,8 +168,11 @@ public class InsertRuangActivity extends AppCompatActivity {
 
         String newRuang = mRuangRef.push().getKey();
 
+        ArrayList<String> imglist = new  ArrayList<String>() ;
+        imglist.add(imgUrl) ;
+        imglist.add(imgUrl) ;
         // creating user object
-        Ruang r = new Ruang(NamaRuang.getText().toString(), imgUrl ,-7.284855,112.796579);
+        Ruang r = new Ruang(NamaRuang.getText().toString(), imgUrl ,-7.284855,112.796579, imglist);
 
         // pushing user to 'users' node using the userId
         mRuangRef.child(newRuang).setValue(r);
