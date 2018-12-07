@@ -4,18 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="250dp">
+    android:layout_height="325dp">
 
     <ImageView
         android:id="@+id/RuangImg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="325dp"
+        android:background="@drawable/sektk"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/colorDarkGray" />
+        tools:layout_editor_absoluteX="69dp" />
 
    <!--
     <Button
@@ -35,12 +32,10 @@
     <ImageView
         android:id="@+id/shadingCard"
         android:layout_width="match_parent"
-        android:layout_height="144dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RuangImg"
-        app:srcCompat="@drawable/backgroundcardviewkelas" />
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/RuangImg"
+        app:srcCompat="@drawable/backgroundcardviewkelas"
+        tools:layout_editor_absoluteX="36dp" />
 
     <ImageView
         android:id="@+id/statusAvailable"
@@ -50,8 +45,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/shadingCard"
+        app:layout_constraintStart_toStartOf="@+id/shadingCard"
         app:layout_constraintTop_toTopOf="@+id/shadingCard"
         app:srcCompat="@drawable/statusiconavailable" />
 
@@ -59,9 +54,10 @@
         android:id="@+id/NamaRuang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="#00000000"
         android:text="KELAS"
         android:textColor="@color/colorWhite"
         android:textSize="25dp"
@@ -73,12 +69,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#00000000"
         android:text="Terpakai/Tidak"
         android:textColor="@color/colorWhite"
-        app:layout_constraintBottom_toBottomOf="@+id/imgviewKelas"
+        app:layout_constraintBottom_toBottomOf="@+id/shadingCard"
         app:layout_constraintStart_toEndOf="@+id/statusAvailable"
-        app:layout_constraintTop_toBottomOf="@+id/NamaRuang"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/NamaRuang" />
+
 </android.support.constraint.ConstraintLayout>
