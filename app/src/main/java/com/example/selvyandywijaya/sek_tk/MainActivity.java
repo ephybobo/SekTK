@@ -1,6 +1,8 @@
 package com.example.selvyandywijaya.sek_tk;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -37,15 +39,65 @@ public class MainActivity extends AppCompatActivity {
 
     public void main_menu (View view)
     {
-        EditText Username = findViewById(R.id.inuser);
+        final EditText Username = findViewById(R.id.inuser);
         final EditText Password = findViewById(R.id.inpass);
 
+
+        mUserRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                if (dataSnapshot.hasChild( Username.getText().toString() ) ) {
+                    // run some code
+                    User text = dataSnapshot.child( Username.getText().toString() ).getValue(User.class);
+
+                    if(Password.getText().toString().equals(text.password)){
+
+                        SharedPreferences data = getSharedPreferences("UserData", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = data.edit();
+
+                        editor.putString("Nama", text.nama);
+                        editor.putString("Status" , text.status);
+
+                        // Commit the edits!
+                        editor.commit();
+
+                        Toast.makeText(getApplicationContext(), "Selamat datang " + text.nama , Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(getApplicationContext() , MainMenuActivity.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(), "Pergi Sana !"+text.password+"/"+Password.getText().toString() , Toast.LENGTH_LONG).show();
+                    }
+
+                }else{
+                    Toast.makeText(getApplicationContext(), "Sialan" , Toast.LENGTH_LONG).show();
+                }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+/*
         mUserRef.child(Username.getText().toString()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 User text = dataSnapshot.getValue(User.class);
 
                 if(Password.getText().toString().equals(text.password)){
+
+                    SharedPreferences data = getSharedPreferences("UserData", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = data.edit();
+
+                    editor.putString("Nama", text.nama);
+                    editor.putString("Status" , text.status);
+
+                    // Commit the edits!
+                    editor.commit();
+
                     Toast.makeText(getApplicationContext(), "Selamat datang " + text.nama , Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(getApplicationContext() , MainMenuActivity.class);
                     startActivity(intent);
@@ -60,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
+*/
 
 
     }

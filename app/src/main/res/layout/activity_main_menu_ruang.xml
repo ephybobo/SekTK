@@ -15,6 +15,7 @@
         android:paddingTop="50dp">
 
         <LinearLayout
+            android:id="@+id/Insert"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -36,16 +37,17 @@
                 android:layout_marginRight="10pt"
                 android:layout_weight="0.3"
                 android:background="@drawable/buttonlogin"
+                android:backgroundTint="#f9f000"
                 android:onClick="insertRuang"
                 android:paddingBottom="11pt"
                 android:paddingTop="11pt"
                 android:text="Insert Ruang"
-                android:textStyle="bold"
-                android:backgroundTint="#f9f000"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/Manage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -67,13 +69,13 @@
                 android:layout_marginRight="10pt"
                 android:layout_weight="0.3"
                 android:background="@drawable/buttonlogin"
+                android:backgroundTint="#f9f000"
                 android:onClick="manageRuang"
                 android:paddingBottom="11pt"
                 android:paddingTop="11pt"
                 android:text="Manage Ruang"
-                android:textStyle="bold"
-                android:backgroundTint="#f9f000"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textStyle="bold" />
 
         </LinearLayout>
 

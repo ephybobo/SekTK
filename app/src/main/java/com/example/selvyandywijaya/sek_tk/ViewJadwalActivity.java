@@ -110,6 +110,8 @@ public class ViewJadwalActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
+                jadwalList.clear();
+
                 for (DataSnapshot childDataSnapshot : dataSnapshot.getChildren()) {
                     //   Log.v(TAG,""+ childDataSnapshot.getKey()); //displays the key for the node
                     // Log.v(TAG,""+ childDataSnapshot.child(--ENTER THE KEY NAME eg. firstname or email etc.--).getValue());   //gives the value for given keyname

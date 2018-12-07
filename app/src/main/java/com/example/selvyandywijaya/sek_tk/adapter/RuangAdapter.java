@@ -12,6 +12,10 @@ import com.bumptech.glide.Glide;
 import com.example.selvyandywijaya.sek_tk.R;
 import com.example.selvyandywijaya.sek_tk.model.Ruang;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -59,6 +63,8 @@ public class RuangAdapter extends BaseAdapter {
                 .findViewById(R.id.thumbnail);*/
         TextView name = (TextView) convertView.findViewById(R.id.NamaRuang);
         ImageView img = convertView.findViewById(R.id.RuangImg);
+        ImageView avail = convertView.findViewById(R.id.statusAvailable);
+        TextView statpak = convertView.findViewById(R.id.statusPakai);
 
         // getting movie data for the row
         Ruang m = Items.get(position);
@@ -74,6 +80,30 @@ public class RuangAdapter extends BaseAdapter {
 
         // title
         name.setText(m.nama);
+
+        if(Collections.frequency(m.shift,"terpakai")>=3) {
+            avail.setImageResource(R.drawable.statusiconunavailable);
+            //statpak.setText("Sedang Dipakai");
+        }else {
+            avail.setImageResource(R.drawable.statusiconavailable);
+            //statpak.setText("Kosong");
+        }
+
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat mdformat = new SimpleDateFormat("HH");
+        String strDate = mdformat.format(calendar.getTime());
+
+        int clk = Integer.parseInt(strDate);
+        if( 8 <= clk && clk <11 ){
+            statpak.setText(m.shift.get(0));
+        }else if( 11 <= clk && clk <14 ){
+            statpak.setText(m.shift.get(1));
+        }else if( 14 <= clk && clk <18 ) {
+            statpak.setText(m.shift.get(2));
+        }else{
+            statpak.setText("tidak terpakai");
+        }
+
 
 
         return convertView;

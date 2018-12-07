@@ -20,7 +20,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class InsertJadwalActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -75,6 +77,7 @@ public class InsertJadwalActivity extends AppCompatActivity implements AdapterVi
         dosen.add("Pak Fuad");
         dosen.add("Pak Arief");
         dosen.add("Pak Akok");
+        dosen.add("Pak Zaini");
 
         // Spinner Drop down elements
         List<String> jam = new ArrayList<String>();
@@ -110,13 +113,43 @@ public class InsertJadwalActivity extends AppCompatActivity implements AdapterVi
                 // Code here executes on main thread after user presses button
 
                 String newJadwal = mJadwalRef.push().getKey();
-
-
                 // creating user object
                 Jadwal j = new Jadwal(InpDosen,InpHari,InpJam,InpMatkul,InpRuang);
 
                 // pushing user to 'users' node using the userId
                 mJadwalRef.child(newJadwal).setValue(j);
+
+
+                // pushing user to 'users' node using the userId
+                //mRuangRef.child(key).child("nama").setValue(NamaRuang.getText().toString());
+
+                mRuangRef.orderByChild("nama").equalTo(InpRuang).addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot){
+
+                        for (DataSnapshot childDataSnapshot : dataSnapshot.getChildren()) {
+
+                            String sh="0";
+
+                            if( InpJam.equals("08:00-10:50") ){
+                               sh="0";
+                            }else if( InpJam.equals("11:00-13.50") ){
+                                sh="1";
+                            }else if( InpJam.equals("14:00-16.50") ) {
+                                sh="2";
+                            }
+
+                            mRuangRef.child( childDataSnapshot.getKey() ).child("shift").child(sh).setValue("terpakai");
+
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
 
                 Intent intent = new Intent(getApplication(), ViewRuangActivity.class);
                 finish();

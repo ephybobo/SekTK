@@ -171,8 +171,14 @@ public class InsertRuangActivity extends AppCompatActivity {
         ArrayList<String> imglist = new  ArrayList<String>() ;
         imglist.add(imgUrl) ;
         imglist.add(imgUrl) ;
+
+        ArrayList<String> shift = new  ArrayList<String>() ;
+        imglist.add("tidak terpakai") ;
+        imglist.add("tidak terpakai") ;
+        imglist.add("tidak terpakai") ;
+
         // creating user object
-        Ruang r = new Ruang(NamaRuang.getText().toString(), imgUrl ,-7.284855,112.796579, imglist);
+        Ruang r = new Ruang(NamaRuang.getText().toString(), imgUrl ,-7.284855,112.796579, imglist,3, shift);
 
         // pushing user to 'users' node using the userId
         mRuangRef.child(newRuang).setValue(r);

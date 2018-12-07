@@ -70,7 +70,8 @@ public class UpdateJadwalActivity extends AppCompatActivity  implements AdapterV
         List<String> dosen = new ArrayList<String>();
         dosen.add("Pak Ketut");
         dosen.add("Pak Uki");
-        dosen.add("Pak Arif");
+        dosen.add("Pak Fuad");
+        dosen.add("Pak Arief");
         dosen.add("Pak Akok");
         dosen.add("Pak Zaini");
 
