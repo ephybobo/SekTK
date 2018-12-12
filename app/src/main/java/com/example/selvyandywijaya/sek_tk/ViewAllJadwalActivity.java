@@ -3,6 +3,7 @@ package com.example.selvyandywijaya.sek_tk;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.selvyandywijaya.sek_tk.adapter.JadwalAdapter;
 import com.example.selvyandywijaya.sek_tk.adapter.RuangAdapter;
@@ -20,7 +21,7 @@ import java.util.List;
 public class ViewAllJadwalActivity extends AppCompatActivity {
 
     private DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
-    DatabaseReference mJadwalRef = mRootRef.child("Jadwal");
+    DatabaseReference mJadwalRef = mRootRef.child("jadwal");
 
     private List<Jadwal> jadwalList = new ArrayList<Jadwal>();
     private ListView listView;
@@ -31,16 +32,19 @@ public class ViewAllJadwalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_all_jadwal);
 
-        listView = (ListView) findViewById(R.id.lv);
+        listView = findViewById(R.id.lv);
         adapter = new JadwalAdapter(this, jadwalList);
         listView.setAdapter(adapter);
+
+        Toast.makeText(getApplicationContext(), "masuk view all jadwal" , Toast.LENGTH_LONG).show();
+
     }
 
     @Override
     protected void onStart(){
         super.onStart();
 
-        mJadwalRef.addValueEventListener(new ValueEventListener() {
+        mJadwalRef.orderByChild("ruang").equalTo("A-108").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
@@ -51,10 +55,10 @@ public class ViewAllJadwalActivity extends AppCompatActivity {
                     // Log.v(TAG,""+ childDataSnapshot.child(--ENTER THE KEY NAME eg. firstname or email etc.--).getValue());   //gives the value for given keyname
                     Jadwal text = childDataSnapshot.getValue(Jadwal.class);
 
-                    Jadwal product = new Jadwal(text.dosen,text.hari,text.jam,text.matakuliah,text.ruang);
-                    //product.nama = text.nama ;
+                    Jadwal j = new Jadwal(text.dosen,text.hari,text.jam,text.matakuliah,text.ruang);
+
                     // adding movie to movies array
-                    jadwalList.add(product);
+                    jadwalList.add(j);
 
                 }
 

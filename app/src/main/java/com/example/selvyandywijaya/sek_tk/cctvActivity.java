@@ -88,6 +88,12 @@ public class cctvActivity extends AppCompatActivity {
         myWebView.getSettings().setAppCacheEnabled(true);
         myWebView.getSettings().setJavaScriptEnabled(true);
         myWebView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
+
+        myWebView.setInitialScale(1);
+        myWebView.getSettings().setLoadWithOverviewMode(true);
+        myWebView.getSettings().setUseWideViewPort(true);
+        myWebView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
+        myWebView.setScrollbarFadingEnabled(false);
 /*
         if( !isNetworkStatusAvailable()){
             myWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
