@@ -14,20 +14,20 @@
         android:scaleType="centerCrop"
         tools:layout_editor_absoluteX="69dp" />
 
-   <!--
-    <Button
-        android:id="@+id/btnviewKelas"
-        android:layout_width="125dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/buttonviewkelas"
-        android:text="Lihat Kelas"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/shadingCard" />-->
+    <!--
+     <Button
+         android:id="@+id/btnviewKelas"
+         android:layout_width="125dp"
+         android:layout_height="47dp"
+         android:layout_marginBottom="8dp"
+         android:layout_marginEnd="8dp"
+         android:layout_marginRight="8dp"
+         android:layout_marginTop="8dp"
+         android:background="@drawable/buttonviewkelas"
+         android:text="Lihat Kelas"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintTop_toTopOf="@+id/shadingCard" />-->
 
     <ImageView
         android:id="@+id/shadingCard"
