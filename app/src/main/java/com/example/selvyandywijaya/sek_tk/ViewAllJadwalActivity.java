@@ -36,7 +36,7 @@ public class ViewAllJadwalActivity extends AppCompatActivity {
         adapter = new JadwalAdapter(this, jadwalList);
         listView.setAdapter(adapter);
 
-        Toast.makeText(getApplicationContext(), "masuk view all jadwal" , Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), "masuk view all jadwal" , Toast.LENGTH_LONG).show();
 
     }
 
@@ -44,7 +44,8 @@ public class ViewAllJadwalActivity extends AppCompatActivity {
     protected void onStart(){
         super.onStart();
 
-        mJadwalRef.orderByChild("ruang").equalTo("A-108").addValueEventListener(new ValueEventListener() {
+        //.equalTo("A-108")
+        mJadwalRef.orderByChild("ruang").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 

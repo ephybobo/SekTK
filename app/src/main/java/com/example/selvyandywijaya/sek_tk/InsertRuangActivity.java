@@ -186,7 +186,7 @@ public class InsertRuangActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplication(), ViewRuangActivity.class);
         finish();
         startActivity(intent);
-        Toast.makeText(getApplicationContext(), "Mengirim Data" , Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), "Mengirim Data" , Toast.LENGTH_LONG).show();
     }
 
 

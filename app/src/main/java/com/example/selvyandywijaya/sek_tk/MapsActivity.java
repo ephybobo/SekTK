@@ -44,7 +44,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         double lat = intent.getDoubleExtra("latroom",0);
         double lng = intent.getDoubleExtra("lngroom",0);
 
-        Toast.makeText(getApplicationContext(), Double.toString(lat) + " x " +Double.toString(lng) , Toast.LENGTH_LONG).show();
+      //  Toast.makeText(getApplicationContext(), Double.toString(lat) + " x " +Double.toString(lng) , Toast.LENGTH_LONG).show();
 
         // Add a marker in Sydney and move the camera
         LatLng classmap = new LatLng(lat, lng);

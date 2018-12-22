@@ -136,7 +136,7 @@ public class UpdateJadwalActivity extends AppCompatActivity  implements AdapterV
                 Intent intent = new Intent(getApplication(), ManageJadwalActivity.class);
                 finish();
                 startActivity(intent);
-                Toast.makeText(getApplicationContext(), "Mengirim Data", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), "Mengirim Data", Toast.LENGTH_LONG).show();
 
             }
         });

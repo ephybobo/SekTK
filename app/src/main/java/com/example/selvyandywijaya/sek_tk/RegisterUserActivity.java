@@ -78,7 +78,7 @@ public class RegisterUserActivity extends AppCompatActivity implements AdapterVi
                 Intent intent = new Intent(getApplication(), MainMenuActivity.class);
                 finish();
                 startActivity(intent);
-                Toast.makeText(getApplicationContext(), "Mengirim Data" , Toast.LENGTH_LONG).show();
+            //    Toast.makeText(getApplicationContext(), "Mengirim Data" , Toast.LENGTH_LONG).show();
 
             }
         });
@@ -105,7 +105,7 @@ public class RegisterUserActivity extends AppCompatActivity implements AdapterVi
             InpHari = item;
         }*/
         // Showing selected spinner item
-        Toast.makeText(parent.getContext(), "Selected: " + item  , Toast.LENGTH_LONG).show();
+     //   Toast.makeText(parent.getContext(), "Selected: " + item  , Toast.LENGTH_LONG).show();
     }
 
     public void onNothingSelected(AdapterView<?> arg0) {

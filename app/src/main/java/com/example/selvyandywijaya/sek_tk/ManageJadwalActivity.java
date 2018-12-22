@@ -37,7 +37,7 @@ public class ManageJadwalActivity extends AppCompatActivity {
         adapter = new ManageJadwalAdapter(this, jadwalList);
         listView.setAdapter(adapter);
 
-        Toast.makeText(this, "create" , Toast.LENGTH_LONG).show();
+     //   Toast.makeText(this, "create" , Toast.LENGTH_LONG).show();
 
     }
 
@@ -45,7 +45,7 @@ public class ManageJadwalActivity extends AppCompatActivity {
     protected void onStart(){
         super.onStart();
 
-        Toast.makeText(this, "start" , Toast.LENGTH_LONG).show();
+       // Toast.makeText(this, "start" , Toast.LENGTH_LONG).show();
 
         // Get the Intent that started this activity and extract the string
        // Intent intent = getIntent();

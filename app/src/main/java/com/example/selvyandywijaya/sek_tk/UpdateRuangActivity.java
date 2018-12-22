@@ -47,7 +47,7 @@ public class UpdateRuangActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplication(), ManageRuangActivity.class);
                 finish();
                 startActivity(intent);
-                Toast.makeText(getApplicationContext(), "Mengirim Data"+key , Toast.LENGTH_LONG).show();
+               // Toast.makeText(getApplicationContext(), "Mengirim Data"+key , Toast.LENGTH_LONG).show();
 
             }
         });

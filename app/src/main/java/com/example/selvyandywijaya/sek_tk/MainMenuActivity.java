@@ -34,11 +34,11 @@ public class MainMenuActivity extends AppCompatActivity {
         TableRow admt = findViewById(R.id.AdminOnlyTxt);
 
         if(Status.equals("dosen") || Status.equals("mahasiswa") ){
-            Toast.makeText(this, "Mahasiswa" , Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, "Mahasiswa" , Toast.LENGTH_LONG).show();
             adm.setVisibility(View.INVISIBLE);
             admt.setVisibility(View.INVISIBLE);
         }else {
-            Toast.makeText(this, "All" , Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, "All" , Toast.LENGTH_LONG).show();
         }
 
     }

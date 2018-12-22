@@ -9,15 +9,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.selvyandywijaya.sek_tk.R;
 import com.example.selvyandywijaya.sek_tk.UpdateRuangActivity;
 import com.example.selvyandywijaya.sek_tk.model.Ruang;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -67,14 +70,31 @@ public class ManageRuangAdapter extends BaseAdapter {
         Button Edit = (Button) convertView.findViewById(R.id.JadwalEdit);
         Button Delete = (Button) convertView.findViewById(R.id.JadwalDelete);
 
+        ImageView avail = convertView.findViewById(R.id.statusAvailable);
+        ImageView img = convertView.findViewById(R.id.RuangImg);
+
         // getting movie data for the row
         final Ruang m = Items.get(position);
+
+        Glide.with(context)
+                .load(m.ImgUri)
+                .placeholder(R.drawable.sek)
+                .error(R.drawable.sek)
+                .into(img);
 
         // thumbnail image
         //thumbNail.setImageUrl(m.thumbnailUrl, mImageLoader);
 
         // title
         ruang.setText(m.nama);
+
+        if(Collections.frequency(m.shift,"terpakai")>=3) {
+            avail.setImageResource(R.drawable.statusiconunavailable);
+            //statpak.setText("Sedang Dipakai");
+        }else {
+            avail.setImageResource(R.drawable.statusiconavailable);
+            //statpak.setText("Kosong");
+        }
 
         //  Edit.setTag();
         //Edit.setTag(R.integer.btn_plus_pos, position);

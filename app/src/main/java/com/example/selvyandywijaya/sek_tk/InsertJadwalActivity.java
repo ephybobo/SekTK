@@ -214,7 +214,7 @@ public class InsertJadwalActivity extends AppCompatActivity implements AdapterVi
             InpHari = item;
         }
         // Showing selected spinner item
-        Toast.makeText(parent.getContext(), "Selected: " + item  , Toast.LENGTH_LONG).show();
+        //Toast.makeText(parent.getContext(), "Selected: " + item  , Toast.LENGTH_LONG).show();
     }
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub

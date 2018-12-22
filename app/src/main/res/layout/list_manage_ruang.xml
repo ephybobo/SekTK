@@ -7,7 +7,7 @@
     android:layout_height="325dp">
 
     <ImageView
-        android:id="@+id/imgviewKelas"
+        android:id="@+id/RuangImg"
         android:layout_width="match_parent"
         android:layout_height="325dp"
         android:background="@drawable/sektk"
@@ -93,7 +93,7 @@
         android:text="VIEW LOCATION"
         android:textColor="@color/colorWhite"
         android:textSize="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/imgviewKelas"
-        app:layout_constraintTop_toTopOf="@+id/imgviewKelas" />
+        app:layout_constraintEnd_toEndOf="@+id/RuangImg"
+        app:layout_constraintTop_toTopOf="@+id/RuangImg" />
 
 </android.support.constraint.ConstraintLayout>

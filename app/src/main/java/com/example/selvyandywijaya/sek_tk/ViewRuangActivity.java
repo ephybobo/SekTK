@@ -71,7 +71,7 @@ public class ViewRuangActivity extends AppCompatActivity {
                 startActivity(intent);*/
 
 
-                Toast.makeText(getBaseContext(), Name, Toast.LENGTH_LONG).show();
+             //   Toast.makeText(getBaseContext(), Name, Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent( getApplicationContext(), ViewJadwalActivity.class);
                 intent.putExtra("RuangName",Name);

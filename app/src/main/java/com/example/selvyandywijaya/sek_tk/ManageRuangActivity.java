@@ -36,7 +36,7 @@ public class ManageRuangActivity extends AppCompatActivity {
         adapter = new ManageRuangAdapter(this, ruangList);
         listView.setAdapter(adapter);
 
-        Toast.makeText(this, "create" , Toast.LENGTH_LONG).show();
+    //    Toast.makeText(this, "create" , Toast.LENGTH_LONG).show();
     }
 
 
@@ -64,7 +64,7 @@ public class ManageRuangActivity extends AppCompatActivity {
                     // Log.v(TAG,""+ childDataSnapshot.child(--ENTER THE KEY NAME eg. firstname or email etc.--).getValue());   //gives the value for given keyname
                     Ruang text = childDataSnapshot.getValue(Ruang.class);
 
-                    Ruang j = new Ruang(childDataSnapshot.getKey() ,text.nama);
+                    Ruang j = new Ruang(childDataSnapshot.getKey() ,text.nama  , text.ImgUri,text.cap ,text.shift);
 
                     // adding to movies array
                     ruangList.add(j);
