@@ -173,9 +173,9 @@ public class InsertRuangActivity extends AppCompatActivity {
         imglist.add(imgUrl) ;
 
         ArrayList<String> shift = new  ArrayList<String>() ;
-        imglist.add("tidak terpakai") ;
-        imglist.add("tidak terpakai") ;
-        imglist.add("tidak terpakai") ;
+        shift.add("tidak terpakai") ;
+        shift.add("tidak terpakai") ;
+        shift.add("tidak terpakai") ;
 
         // creating user object
         Ruang r = new Ruang(NamaRuang.getText().toString(), imgUrl ,-7.284855,112.796579, imglist,3, shift);
