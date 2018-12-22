@@ -74,6 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="22dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/buttonlocation"
             android:onClick="ViewMap"
@@ -81,8 +82,7 @@
             android:textColor="@color/colorWhite"
             android:textSize="10dp"
             app:layout_constraintEnd_toEndOf="@+id/RuangImg"
-            app:layout_constraintTop_toTopOf="@+id/RuangImg"
-            android:layout_marginRight="8dp" />
+            app:layout_constraintTop_toTopOf="@+id/RuangImg" />
 
     </android.support.constraint.ConstraintLayout>
 
